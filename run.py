@@ -44,6 +44,7 @@ def welcome():
     print(alien.LOGO)
     print("Before we start, please tell us your name.\n")
     user = input("What is your name Earthling?\n").capitalize()
+    print()
 
     if user.isalpha() == True:
         print(f"Greetings {user}...\n")
@@ -57,7 +58,31 @@ def welcome():
         user = input("What is your name Earthling?\n").capitalize()
         
 
-#def play_again():
+def play_again_winner():
+    """
+    Function for asking the user if they want to play again
+    """
+    response = input(
+        "Do you think you could stop them again...?"
+        "\nEnter 'y' or 'n' to play again: ")
+    if response == "y":
+        main()
+    else:
+        print("Hope you enjoyed playing.. See you again soon")
+
+
+def play_again_loser():
+    """
+    Function for asking the user if they want to play again
+    """
+    response = input(
+        "But there may still be time to stop them\n"
+        "Would you like to try again...? Enter 'y' or 'n' to play again: "
+    )
+    if response == "y":
+        main()
+    else:
+        print("Hope you enjoyed playing.. See you again soon")
 
 
 def create_random_country():
@@ -101,7 +126,7 @@ def main():
             elif guess in guessed_letters:
                 print("You have already guessed that. Try again..!")
             elif guess not in country:
-                print("Bad luck Earthling That letter is wrong")
+                print("Guess again Earthling That letter is wrong")
                 guessed_letters.append(guess)
                 remaining_attempts -= 1
             elif guess in country:
@@ -120,7 +145,7 @@ def main():
                 if letter in guessed_letters:
                     status += letter
                 else:
-                    status += "_"
+                    status += " _ "
             print(status)
 
         if status == country:
@@ -129,9 +154,13 @@ def main():
             "and stopped the Alien Invasion...!!!"
             )
             guessed = True
+            play_again_winner()
         elif remaining_attempts == 0:
-            print("Oh No... You couldn't stop the Alien Invasion")
+            print("Bad luck Aliens have invaded and are taking over")
 
         print(alien.ALIENS[remaining_attempts])
+
+    play_again_loser()
+
 
 main()

@@ -17,17 +17,31 @@ def rules():
 
 
 def intro():
+    """
+    Opening text welcoming the user
+    Gives options for rules or to play the game
+    """
+    print("         ALIEN INVASION 2022...!!\n")
+    print("Hello Earthling. What would you like to do?")
+    print("Enter 1 for rules or anything else to play the game.\n")
+    user_input = input("Please enter your option: ")
+    if user_input == "1":
+        rules()
+    else:
+        welcome()
+
+#def welcome():
 
 
-def welcome():
+
+#def play_again():
 
 
-def play_again():
-
-
-def create_random_country():
+#def create_random_country():
 
 
 def game_start():
+    intro()
 
 
+game_start()

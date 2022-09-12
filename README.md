@@ -9,9 +9,10 @@ The game is aimed at people who like guessing games and who may have an interest
 # Index
 * [User Experience](#user-experience-ux)
 * [Features](#features)
-  * [Flow Chart](#flow_chart)
-  * [Title](#title)
+  * [Flow Chart](#flow-chart)
+  * [Welcome Screen](#welcome-screen)
   * [Rules](#rules)
+  * [Game](#game)
   * [Aliens](#alien)
   * [Score](#score)
   * [Play Again](#play_again)
@@ -36,8 +37,30 @@ The game is aimed at people who like guessing games and who may have an interest
     * Have a clear option to start the game again
     * Enjoy the game
 
-# Flow Chart
+# Features
+## Flow Chart
 * I initially created a flow chart to help me plan the game.
 
 ![Flow Chart](images/alien_invasion_flowchhart.jpg)
+
+## Welcome Screen
+* This is displayed when the game starts
+* It shows a UFO using ASCII art and the title of the game
+* It gives the user the option to read the rules by pressing 1 or play the game by entering any other key
+
+## Rules
+* The rules are written as if they are written by the aliens who are about to invade
+* They tell the user what the game is about and asks for their name
+* There is also a different UFO ASCII art design
+
+## Game
+* The game starts by showing the following:
+    * How many letters are in the secret word
+    * The same number of dashes that are in the secret word, which is an echo to the Hangman game
+    * How many guesses the user has left
+    * Asks the user to guess a letter
+    
+
+
+
 

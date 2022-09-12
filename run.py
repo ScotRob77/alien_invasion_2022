@@ -34,6 +34,7 @@ def intro():
     else:
         welcome()
 
+
 def welcome():
     """
     Asks user for name.
@@ -49,11 +50,8 @@ def welcome():
         print("What country do you think we will invade first...?\n")
 
     else:
-        print(
-            "Not a valid input. Only use letters, "
-            "Please try again"
-            )
-        user = input("What is your name Earthling?\n").capitalize()
+        print('Please enter your name using letters only')
+        welcome()
         
 
 def play_again_winner():

@@ -47,7 +47,7 @@ def welcome():
 
     if user.isalpha() == True:
         print(f"Greetings {user}...\n")
-        print("What country do you think we will invade first...?")
+        print("What country do you think we will invade first...?\n")
 
     else:
         print(
@@ -67,7 +67,7 @@ def create_random_country():
     And chooses a country at random
     """
     random_country = countries.country_list
-    return random.choice(random_country)
+    return random.choice(random_country).upper()
 
 
 def main():
@@ -76,21 +76,24 @@ def main():
     """
     intro()
 
-    # Variable to hold the random country
+    # Variables needed for game play
     country = create_random_country()
-   
+
     guessed_letters = []
+
     remaining_attempts = 6
+
     guessed = False
+
     alphabet = string.ascii_uppercase
 
     # Print a number of _ equal to the letters in the country to guess
     print("The country contains", len(country), "letters")
-    print(len(country)) * ("_")
+    print(len(country) * (" _ "))
 
     while guessed == False and remaining_attempts > 0:
-        print("You have" + str(remaining_attempts) + "guesses left")
-        guess = input("Guess a letter").upper()
+        print("You have " + str(remaining_attempts) + " guesses left.\n")
+        guess = input("Guess a letter: ").upper()
 
         if len(guess) == 1:
             if guess not in alphabet:
@@ -129,7 +132,6 @@ def main():
         elif remaining_attempts == 0:
             print("Oh No... You couldn't stop the Alien Invasion")
 
-
-
+        print(alien.ALIENS[remaining_attempts])
 
 main()

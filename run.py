@@ -125,13 +125,13 @@ def main():
                 print("You have already guessed that. Try again..!")
             elif guess not in country:
                 if remaining_attempts > 0:
-                    print("Guess again Earthling That letter is wrong")
+                    print(f"Guess again Earthling... {guess} is wrong")
                     guessed_letters.append(guess)
                     remaining_attempts -= 1
                 else:
                     print("Game over...\n")
             elif guess in country:
-                print("Well done... That letter is correct")
+                print(f"Well done... {guess} is correct")
                 guessed_letters.append(guess)
             else:
                 print("Check you entry... Invalid input")
@@ -142,7 +142,7 @@ def main():
 
         print(alien.ALIENS[remaining_attempts])
         status = ""
-        if guessed == False:
+        if guessed is False:
             for letter in country:
                 if letter in guessed_letters:
                     status += letter

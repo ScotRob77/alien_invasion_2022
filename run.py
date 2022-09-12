@@ -3,8 +3,6 @@ import countries
 import alien
 import string
 
-print(alien.LOGO)
-
 
 def rules():
     """
@@ -99,6 +97,8 @@ def main():
     """
     Initiates game and incorporates game loop
     """
+    print(alien.LOGO)
+
     intro()
 
     # Variables needed for game play
@@ -157,10 +157,9 @@ def main():
             play_again_winner()
         elif remaining_attempts == 0:
             print("Bad luck Aliens have invaded and are taking over")
+            play_again_loser()
 
         print(alien.ALIENS[remaining_attempts])
-
-    play_again_loser()
 
 
 main()

@@ -65,8 +65,8 @@ def create_random_country():
     return random.choice(country)
 
 
-def game_start():
+def main():
     intro()
 
 
-game_start()
+main()

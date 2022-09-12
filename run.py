@@ -5,14 +5,6 @@ import string
 
 print(alien.LOGO)
 
-"""
-Variables needed for game play
-"""
-guessed_letters = []
-remaining_attempts = 6
-guessed = False
-alphabet = string.ascii_uppercase
-
 
 def rules():
     """
@@ -74,8 +66,8 @@ def create_random_country():
     Pulls the country_list from the countries file
     And chooses a country at random
     """
-    country = countries.country_list
-    return random.choice(country)
+    random_country = countries.country_list
+    return random.choice(random_country)
 
 
 def main():
@@ -83,6 +75,59 @@ def main():
     Initiates game and incorporates game loop
     """
     intro()
+
+    # Variable to hold the random country
+    country = create_random_country()
+   
+    guessed_letters = []
+    remaining_attempts = 6
+    guessed = False
+    alphabet = string.ascii_uppercase
+
+    # Print a number of _ equal to the letters in the country to guess
+    print("The country contains", len(country), "letters")
+    print(len(country)) * ("_")
+
+    while guessed == False and remaining_attempts > 0:
+        print("You have" + str(remaining_attempts) + "guesses left")
+        guess = input("Guess a letter").upper()
+
+        if len(guess) == 1:
+            if guess not in alphabet:
+                print("Check your entry. Use letters only")
+            elif guess in guessed_letters:
+                print("You have already guessed that. Try again..!")
+            elif guess not in country:
+                print("Bad luck Earthling That letter is wrong")
+                guessed_letters.append(guess)
+                remaining_attempts -= 1
+            elif guess in country:
+                print("Well done... That letter is correct")
+                guessed_letters.append(guess)
+            else:
+                print("Check you entry... Invalid input")
+
+        else:
+            if len(guess) != 1:
+                print("Whoa there Earthling.. Only 1 letter at a time")
+
+        status = ""
+        if guessed == False:
+            for letter in country:
+                if letter in guessed_letters:
+                    status += letter
+                else:
+                    status += "_"
+            print(status)
+
+        if status == country:
+            print(
+                "Congratulations... You guessed the right country "
+            "and stopped the Alien Invasion...!!!"
+            )
+            guessed = True
+        elif remaining_attempts == 0:
+            print("Oh No... You couldn't stop the Alien Invasion")
 
 
 

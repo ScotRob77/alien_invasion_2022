@@ -97,7 +97,7 @@ def main():
     """
     Initiates game and incorporates game loop
     """
-    print(alien.LOGO)
+    print(alien.LOGO_TWO)
 
     intro()
 

@@ -1,6 +1,8 @@
 import random
 import countries
+import alien
 
+print(alien.LOGO)
 
 def rules():
     """
@@ -37,6 +39,7 @@ def welcome():
     Asks user for name.
     Asks user for letters for name only
     """
+    print(alien.LOGO)
     print("Before we start, please tell us your name.\n")
     user = input("What is your name Earthling?\n").capitalize()
 

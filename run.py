@@ -1,8 +1,18 @@
 import random
 import countries
 import alien
+import string
 
 print(alien.LOGO)
+
+"""
+Variables needed for game play
+"""
+guessed_letters = []
+remaining_attempts = 6
+guessed = False
+alphabet = string.ascii_uppercase
+
 
 def rules():
     """
@@ -69,7 +79,12 @@ def create_random_country():
 
 
 def main():
+    """
+    Initiates game and incorporates game loop
+    """
     intro()
+
+
 
 
 main()

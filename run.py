@@ -1,4 +1,5 @@
 import random
+import countries
 
 
 def rules():
@@ -51,11 +52,17 @@ def welcome():
         user = input("What is your name Earthling?\n").capitalize()
         
 
-
 #def play_again():
 
 
-#def create_random_country():
+def create_random_country():
+    """
+    Generates the country that the user will be guessing
+    Pulls the country_list from the countries file
+    And chooses a country at random
+    """
+    country = countries.country_list
+    return random.choice(country)
 
 
 def game_start():

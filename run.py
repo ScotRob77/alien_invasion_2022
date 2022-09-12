@@ -126,9 +126,12 @@ def main():
             elif guess in guessed_letters:
                 print("You have already guessed that. Try again..!")
             elif guess not in country:
-                print("Guess again Earthling That letter is wrong")
-                guessed_letters.append(guess)
-                remaining_attempts -= 1
+                if remaining_attempts > 0:
+                    print("Guess again Earthling That letter is wrong")
+                    guessed_letters.append(guess)
+                    remaining_attempts -= 1
+                else:
+                    print("Game over...\n")
             elif guess in country:
                 print("Well done... That letter is correct")
                 guessed_letters.append(guess)
@@ -156,7 +159,7 @@ def main():
             guessed = True
             play_again_winner()
         elif remaining_attempts == 0:
-            print("Bad luck Aliens have invaded and are taking over")
+            print("Bad luck Aliens have invaded and are taking over.\n")
             play_again_loser()
 
         print(alien.ALIENS[remaining_attempts])

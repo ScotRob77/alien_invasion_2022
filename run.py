@@ -106,7 +106,7 @@ def main():
 
     guessed_letters = []
 
-    remaining_attempts = 6
+    remaining_attempts = len(alien.ALIENS)
 
     guessed = False
 

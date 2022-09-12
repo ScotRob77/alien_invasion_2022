@@ -6,9 +6,9 @@ def rules():
     Rules of the game.
     """
     print("        WELCOME TO ALIEN INVASION...!\n")
-    print("Hello Earhling, we are from the plant Alshabaa...\n")
+    print("Hello Earthling, we are from the plant Alshabaa...\n")
     print("We have been watching Earth for many years...\n")
-    print("It seems humans have ruined your planet...\n")
+    print("The human race has ruined the planet...\n")
     print("So we are here to take over...!\n")
     print("If you want to stop us from invading...\n")
     print("You need to guess which country we intend to invade first.\n")
@@ -24,14 +24,32 @@ def intro():
     print("         ALIEN INVASION 2022...!!\n")
     print("Hello Earthling. What would you like to do?")
     print("Enter 1 for rules or anything else to play the game.\n")
-    user_input = input("Please enter your option: ")
+    user_input = input("What option would you like: ")
+    print("\n")
     if user_input == "1":
         rules()
     else:
         welcome()
 
-#def welcome():
+def welcome():
+    """
+    Asks user for name.
+    Asks user for letters for name only
+    """
+    print("Before we start, please tell us your name.\n")
+    user = input("What is your name Earthling?\n").capitalize()
 
+    if user.isalpha() == True:
+        print(f"Greetings {user}...\n")
+        print("What country do you think we will invade first...?")
+
+    else:
+        print(
+            "Not a valid input. Only use letters, "
+            "Please try again"
+            )
+        user = input("What is your name Earthling?\n").capitalize()
+        
 
 
 #def play_again():

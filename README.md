@@ -1,31 +1,43 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ALIEN INVASION 2022
 
-Welcome ScotRob77,
+This is a python terminal guessing game. The game is based on the classic hangman game, whereupon the user has to guess the country which the aliens are going to invade. The user has a set number of guesses to get the answer before the aliens invade.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+The game is aimed at people who like guessing games and who may have an interest in the countries of the world. Due to the content younger children might get frustrated due to the knowledge of countries of the world being needed to omplete the game. With this in mind the game is suitable for players of age 10 and up.
 
-## Reminders
+***
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+# Index
+* [User Experience](#user-experience-ux)
+* [Features](#features)
+  * [Flow Chart](#flow_chart)
+  * [Title](#title)
+  * [Rules](#rules)
+  * [Aliens](#alien)
+  * [Score](#score)
+  * [Play Again](#play_again)
+* [Typography and color scheme](#typography-and-color-scheme)
+* [Technologies used](#technologies-used)
+* [Testing](#testing)
+  * [Testing User Stories](#testing-user-stories)
+* [Bugs](#bugs)
+* [Validator testing](#validator-testing)
+* [Deployment](#deployment)
+  * [Cloning/Forking](#cloningforking)
+* [Credits](#credits)
 
-## Creating the Heroku app
+***
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+# User Experience (UX)
+* As a user I want to be able to:
+    * Be able to navigate any options available
+    * Understand the rules of the game
+    * Have a large choice of guesses so the game doesn't repeat itself too often
+    * See how many guesses I have left
+    * Have a clear option to start the game again
+    * Enjoy the game
 
-1. `heroku/python`
-2. `heroku/nodejs`
+# Flow Chart
+* I initially created a flow chart to help me plan the game.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+![Flow Chart](images/alien_invasion_flowchhart.jpg)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!

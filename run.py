@@ -62,7 +62,7 @@ def play_again_winner():
     """
     response = input(
         "Do you think you could stop them again...?"
-        "\nEnter 'y' or 'n' to play again: ")
+        "\nEnter 'y' to play again: ")
     if response == "y":
         main()
     else:
@@ -75,7 +75,7 @@ def play_again_loser():
     """
     response = input(
         "But there may still be time to stop them\n"
-        "Would you like to try again...? Enter 'y' or 'n' to play again: "
+        "Would you like to try again...? Enter 'y' to play again: "
     )
     if response == "y":
         main()
@@ -142,6 +142,7 @@ def main():
             if len(guess) != 1:
                 print("Whoa there Earthling.. Only 1 letter at a time")
 
+        print(alien.ALIENS[remaining_attempts])
         status = ""
         if guessed == False:
             for letter in country:
@@ -154,7 +155,7 @@ def main():
         if status == country:
             print(
                 "Congratulations... You guessed the right country "
-            "and stopped the Alien Invasion...!!!"
+                "and stopped the Alien Invasion...!!!"
             )
             guessed = True
             play_again_winner()
@@ -162,7 +163,7 @@ def main():
             print("Bad luck Aliens have invaded and are taking over.\n")
             play_again_loser()
 
-        print(alien.ALIENS[remaining_attempts])
+        
 
 
 main()

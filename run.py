@@ -43,6 +43,8 @@ def welcome():
     """
     Asks user for name.
     Asks user for letters for name only
+    If user enters name in correct format they are asked what country they 
+    think will be invaded first
     """
     print(alien.LOGO)
     print("Before we start, please tell us your name.\n")
@@ -63,11 +65,12 @@ def play_again_winner():
     Function for asking the user if they want to play again
     """
     response = input(
-        "Do you think you could stop them again...?"
+        "Do you think you could stop them again...?\n"
         "\nEnter 'y' to play again: ")
     if response == "y":
         main()
     else:
+        print()
         print("Hope you enjoyed playing.. See you again soon")
 
 
@@ -76,12 +79,13 @@ def play_again_loser():
     Function for asking the user if they want to play again
     """
     response = input(
-        "But there may still be time to stop them\n"
-        "Would you like to try again...? Enter 'y' to play again: \n"
+        "But there may still be time to stop them...\n\n"
+        "Would you like to try again...? Enter 'y' to play again: "
     )
     if response == "y":
         main()
     else:
+        print()
         print("Hope you enjoyed playing.. See you again soon")
 
 

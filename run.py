@@ -15,7 +15,7 @@ def rules():
     print("So we are here to take over...!\n")
     print("If you want to stop us from invading...\n")
     print("You need to guess which country we intend to invade first.\n")
-    print("But beware... You can only guess wrong 6 times...\n")
+    print("But beware... You can only guess wrong 5 times...\n")
     welcome()
 
 
@@ -104,7 +104,7 @@ def main():
 
     guessed_letters = []
 
-    remaining_attempts = 5
+    remaining_attempts = 6
 
     guessed = False
 
@@ -118,6 +118,7 @@ def main():
         print("You have " + str(remaining_attempts) + " guesses left.\n")
         
         guess = input("Guess a letter: ").strip().upper()
+        print()
 
         if len(guess) != 1:
             print("Whoa there Earthling.. Only 1 letter at a time")
@@ -153,13 +154,13 @@ def main():
 
         if status == country:
             print(
-                "Congratulations... You guessed the right country "
-                "and stopped the Alien Invasion...!!!"
+                "CONGRATULATIONS... You guessed the right country "
+                "and stopped the Alien Invasion...!!!\n"
             )
             guessed = True
             play_again_winner()
         elif remaining_attempts == 0:
-            print("Bad luck Aliens have invaded and are taking over.\n")
+            print("You Lose..! Aliens have invaded and are taking over.\n")
             play_again_loser()
 
         

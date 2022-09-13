@@ -7,6 +7,8 @@ import string
 def rules():
     """
     Rules of the game.
+    Following the rules is the welcome function requesting the user
+    to enter their name.
     """
     print("        WELCOME TO ALIEN INVASION...!\n")
     print("Hello Earthling, we are from the plant Alshabaa...\n")
@@ -21,19 +23,21 @@ def rules():
 
 def intro():
     """
-    Opening text welcoming the user
-    Gives options for rules or to play the game
+    Opening text where the user is given two options
+    The option to read the rules or to play the game
     """
     print("         ALIEN INVASION 2022...!!\n")
     print("Hello Earthling. What would you like to do?")
-    print("Enter 1 for rules or anything else to play the game.\n")
+    print("Enter 1 for rules or 2 to play the game.\n")
     user_input = input("What option would you like: ")
     print("\n")
     if user_input == "1":
         rules()
-    else:
+    elif user_input == "2":
         welcome()
-
+    else:
+        print("INVALID INPUT Enter 1 or 2..\n")
+        intro()
 
 def welcome():
     """
@@ -73,7 +77,7 @@ def play_again_loser():
     """
     response = input(
         "But there may still be time to stop them\n"
-        "Would you like to try again...? Enter 'y' to play again: "
+        "Would you like to try again...? Enter 'y' to play again: \n"
     )
     if response == "y":
         main()

@@ -42,7 +42,7 @@ def welcome():
     """
     print(alien.LOGO)
     print("Before we start, please tell us your name.\n")
-    user = input("What is your name Earthling?\n").capitalize()
+    user = input("What is your name Earthling?\n").strip().capitalize()
     print()
 
     if user.isalpha() == True:
@@ -104,7 +104,7 @@ def main():
 
     guessed_letters = []
 
-    remaining_attempts = len(alien.ALIENS)
+    remaining_attempts = 6
 
     guessed = False
 
@@ -116,31 +116,32 @@ def main():
 
     while guessed == False and remaining_attempts > 0:
         print("You have " + str(remaining_attempts) + " guesses left.\n")
-        guess = input("Guess a letter: ").upper()
+        
+        guess = input("Guess a letter: ").strip().upper()
 
-        if len(guess) == 1:
-            if guess not in alphabet:
-                print("Check your entry. Use letters only")
-            elif guess in guessed_letters:
-                print("You have already guessed that. Try again..!")
-            elif guess not in country:
-                if remaining_attempts > 0:
-                    print(f"Guess again Earthling... {guess} is wrong")
-                    guessed_letters.append(guess)
-                    remaining_attempts -= 1
-                else:
-                    print("Game over...\n")
-            elif guess in country:
-                print(f"Well done... {guess} is correct")
-                guessed_letters.append(guess)
-            else:
-                print("Check you entry... Invalid input")
+        if len(guess) != 1:
+            print("Whoa there Earthling.. Only 1 letter at a time")
+            continue
+
+        if guess not in alphabet:
+            print("Check your entry. Use letters only")
+            continue
+
+        if guess in guessed_letters:
+            print("You have already guessed that. Try again..!")
+            continue
+
+        if guess in country:
+            print(f"Well done... {guess} is correct")
+            guessed_letters.append(guess)
 
         else:
-            if len(guess) != 1:
-                print("Whoa there Earthling.. Only 1 letter at a time")
+            print(f"Bad luck...! {guess} is wrong")
+            guessed_letters.append(guess)
+            remaining_attempts -= 1
 
         print(alien.ALIENS[remaining_attempts])
+
         status = ""
         if guessed is False:
             for letter in country:

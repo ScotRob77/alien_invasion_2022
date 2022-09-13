@@ -43,11 +43,12 @@ def intro():
         print("INVALID INPUT Enter 1 or 2..\n")
         intro()
 
+
 def welcome():
     """
     Asks user for name.
     Asks user for letters for name only
-    If user enters name in correct format they are asked what country they 
+    If user enters name in correct format they are asked what country they
     think will be invaded first
     """
     print(alien.LOGO)
@@ -55,14 +56,14 @@ def welcome():
     user = input("What is your name Earthling?\n").strip().capitalize()
     print()
 
-    if user.isalpha() == True:
+    if user.isalpha():
         print(f"Greetings {user}...\n")
         print("What country do you think we will invade first...?\n")
 
     else:
         print('Please enter your name using letters only')
         welcome()
-        
+
 
 def play_again_winner():
     """
@@ -126,9 +127,9 @@ def main():
     print("The country contains", len(country), "letters")
     print(len(country) * (" _ "))
 
-    while guessed == False and remaining_attempts > 0:
+    while guessed is False and remaining_attempts > 0:
         print("You have " + str(remaining_attempts) + " guesses left.\n")
-        
+
         guess = input("Guess a letter: ").strip().upper()
         print()
 

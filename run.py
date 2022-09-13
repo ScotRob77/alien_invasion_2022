@@ -175,5 +175,6 @@ def main():
             print("You Lose..! Aliens have invaded and are taking over.\n")
             play_again_loser()
 
-        
-main()
+
+if __name__ == "__main__":
+    main()

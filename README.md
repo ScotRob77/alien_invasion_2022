@@ -14,6 +14,7 @@ The game is aimed at people who like guessing games and who may have an interest
   * [Rules](#rules)
   * [Game](#game)
   * [Aliens](#alien)
+  * [Logos](#logo)
   * [Score](#score)
   * [Play Again](#play_again)
 * [Typography and color scheme](#typography-and-color-scheme)
@@ -59,6 +60,7 @@ The game is aimed at people who like guessing games and who may have an interest
     * The same number of dashes that are in the secret word, which is an echo to the Hangman game
     * How many guesses the user has left
     * Asks the user to guess a letter
+    
     
 
 

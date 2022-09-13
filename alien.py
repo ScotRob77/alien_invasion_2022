@@ -81,7 +81,12 @@ ALIENS = ["""
     """, """
     """]
 
-
+"""
+Logos created using ASCII art
+Used to make the game more engaging
+LOGO taken from https://ascii.co.uk/art/ufo
+LOGO_TWO taken from https://emojicombos.com/ufo-ascii-art
+"""
 LOGO = """
                  _,--=--._
                ,'    _    `.

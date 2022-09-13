@@ -4,6 +4,8 @@ This is a python terminal guessing game. The game is based on the classic hangma
 
 The game is aimed at people who like guessing games and who may have an interest in the countries of the world. Due to the content younger children might get frustrated due to the knowledge of countries of the world being needed to omplete the game. With this in mind the game is suitable for players of age 10 and up.
 
+[Live game can be found here](https://alien-invasion-2022.herokuapp.com/)
+![Am I Responsive](images/alien_responsive.jpg)
 ***
 
 # Index
@@ -143,41 +145,46 @@ As a user I want to be able to:
 There are no known bugs
 
 ***
-## Deployment
+# Deployment
 
 The site was deployed to Heroku. The steps to deploy are as follows:
-  1. Log in to Heroku.
-  2. Click "Create new app".
-  3. Choose app name and choose a region.
-  4. Click "Create app".
-  5. Navigate to the "settings" tab.
-  6. "Click "Reveal Config Vars".
-  7. Add Config Var in Heroku's Settings. The key is PORT and the value is 8000
-  8. Scroll down to "Buildpacks".
-  9. Click "Add Buildpack".
-  10. First add "python", click save.
-  11. Second add "nodejs", click save.
+* On the Heroku dashboard, select "New" and click "Create new app"
+  * Create a unique app name
+  * Select your region
+  * Click "Create app"
+* Go to the settings tab:
+  * Scroll down to the config vars section and select "Reveal Config Vars"
+  * Add necessary config vars
+  * In this case, in the key field enter "PORT" and the value field enter "8000"
+  * Click "Add"
+  * Scroll down to Buildpacks and click "Add buildpack"
+  * Add the necessary buildpacks.
+  * In this case, select "python" and click "Save changes"
+  * Then, select "node.js" and click "Save changes"
+* Go to the Deploy tab:
+  * Select GitHub and confirm connection to GitHub account
+  * Search for the repository and click "Connect"
+  * Scroll down to the deploy options
+  * Select automatic deploys if you would like automatic deployment with each new push to the GitHub repository
+  * In manual deploy, select which branch to deploy and click "Deploy Branch"
+  * Heroku will start building the app
+* The link to the app can be found at the top of the page by clicking "Open app"
 
-### Automated Deployments from GitHub disabled by Heroku.
+The live site can be found here: [Alien Invasion 2022](https://alien-invasion-2022.herokuapp.com/)
 
-Follow the steps below to deploy from your Gitpod workspace:
-  1. Open the terminal.
-  2. command: heroku login -i
-  3. Get your app name from heroku.
-  4. command: heroku apps
-  5. Set the heroku remote. (Replace <app_name> with your actual app name and remove the <> characters)
-  6. command: heroku git:remote -a <app_name>
-  7. Add and commit any changes to your code if applicable
-  8. command: git add . && git commit -m "Deploy to Heroku via CLI"
-  9. Push to both GitHub and Heroku
-  10. command: git push origin main
-  11. command: git push heroku main
+## Cloning/Forking
+* In the GitHub repository, click the "Code" button.
+* Select "HTTPS" and copy the URL.
+* Open Git Bash and navigate to the repository where you would like to locate the cloned repository.
+* Type "git clone" followed by the copied URL.
+* Press enter to create the clone.
 
 ## Credits
 
 * [Am I Responsive:](http://ami.responsivedesign.is) Checking the responsive
 * [Lucid App](https://lucid.app/documents#/dashboard) Used to create the Flowchart
-* [Aminah Mardiyyah Rufai](https://mardiyyah.medium.com/a-simple-hangman-learnpythonthroughprojects-series-10-fedda58741b) Was used for the original layout of code
+* [Aminah Mardiyyah Rufai](https://mardiyyah.medium.com/a-simple-hangman-learnpythonthroughprojects-series-10-fedda58741b) I used this for the initial layout of the game
+* [SJE Collins](https://github.com/SJECollins) Used the steps for the deployment
 
 
 ### Acknowledgements

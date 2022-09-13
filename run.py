@@ -3,6 +3,10 @@ import countries
 import alien
 import string
 
+"""
+Credit to https://mardiyyah.medium.com/ for game idea and parts of code
+"""
+
 
 def rules():
     """
@@ -118,7 +122,7 @@ def main():
 
     alphabet = string.ascii_uppercase
 
-    # Print a number of _ equal to the letters in the country to guess
+    # Prints a number of _ equal to the letters in the country to guess
     print("The country contains", len(country), "letters")
     print(len(country) * (" _ "))
 

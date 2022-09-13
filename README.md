@@ -141,3 +141,45 @@ As a user I want to be able to:
 ***
 # Bugs
 There are no known bugs
+
+***
+## Deployment
+
+The site was deployed to Heroku. The steps to deploy are as follows:
+  1. Log in to Heroku.
+  2. Click "Create new app".
+  3. Choose app name and choose a region.
+  4. Click "Create app".
+  5. Navigate to the "settings" tab.
+  6. "Click "Reveal Config Vars".
+  7. Add Config Var in Heroku's Settings. The key is PORT and the value is 8000
+  8. Scroll down to "Buildpacks".
+  9. Click "Add Buildpack".
+  10. First add "python", click save.
+  11. Second add "nodejs", click save.
+
+### Automated Deployments from GitHub disabled by Heroku.
+
+Follow the steps below to deploy from your Gitpod workspace:
+  1. Open the terminal.
+  2. command: heroku login -i
+  3. Get your app name from heroku.
+  4. command: heroku apps
+  5. Set the heroku remote. (Replace <app_name> with your actual app name and remove the <> characters)
+  6. command: heroku git:remote -a <app_name>
+  7. Add and commit any changes to your code if applicable
+  8. command: git add . && git commit -m "Deploy to Heroku via CLI"
+  9. Push to both GitHub and Heroku
+  10. command: git push origin main
+  11. command: git push heroku main
+
+## Credits
+
+* [Am I Responsive:](http://ami.responsivedesign.is) Checking the responsive
+* [Lucid App](https://lucid.app/documents#/dashboard) Used to create the Flowchart
+* [Aminah Mardiyyah Rufai](https://mardiyyah.medium.com/a-simple-hangman-learnpythonthroughprojects-series-10-fedda58741b) Was used for the original layout of code
+
+
+### Acknowledgements
+
+- My mentor at Code Institute Brian Macharia for code review, help and feedback. Very much appreciated!

@@ -21,7 +21,7 @@ def rules():
     print("So we are here to take over...!\n")
     print("If you want to stop us from invading...\n")
     print("You need to guess which country we intend to invade first.\n")
-    print("But beware... You can only guess wrong 5 times...\n")
+    print("But beware... You can only guess wrong 6 times...\n")
     welcome()
 
 

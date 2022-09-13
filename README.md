@@ -2,7 +2,7 @@
 
 This is a python terminal guessing game. The game is based on the classic hangman game, whereupon the user has to guess the country which the aliens are going to invade. The user has a set number of guesses to get the answer before the aliens invade.
 
-The game is aimed at people who like guessing games and who may have an interest in the countries of the world. Due to the content younger children might get frustrated due to the knowledge of countries of the world being needed to omplete the game. With this in mind the game is suitable for players of age 10 and up.
+The game is aimed at people who like guessing games and who may have an interest in the countries of the world. Due to the content younger children might get frustrated due to the knowledge of countries of the world being needed to complete the game. With this in mind the game is suitable for players of age 10 and up.
 
 [Live game can be found here](https://alien-invasion-2022.herokuapp.com/)
 ![Am I Responsive](images/alien_responsive.jpg)
@@ -179,7 +179,8 @@ The live site can be found here: [Alien Invasion 2022](https://alien-invasion-20
 * Type "git clone" followed by the copied URL.
 * Press enter to create the clone.
 
-## Credits
+***
+# Credits
 
 * [Am I Responsive:](http://ami.responsivedesign.is) Checking the responsive
 * [Lucid App](https://lucid.app/documents#/dashboard) Used to create the Flowchart

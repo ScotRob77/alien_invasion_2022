@@ -93,7 +93,7 @@ def play_again_loser():
         print("Hope you enjoyed playing.. See you again soon")
 
 
-def create_random_country():
+def choose_random_country():
     """
     Generates the country that the user will be guessing
     Pulls the country_list from the countries file
@@ -112,7 +112,7 @@ def main():
     intro()
 
     # Variables needed for game play
-    country = create_random_country()
+    country = choose_random_country()
 
     guessed_letters = []
 

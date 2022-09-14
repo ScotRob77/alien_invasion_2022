@@ -124,14 +124,19 @@ def choose_random_country():
 def main():
     """
     Initiates game and starts game loop
+        if statements validates user input
+    Returns:
+        input error message or Well done message
+      else statement is for wrong guesses
+    Returns:
+        Bad luck message
+    Dashes and Alien art are displayed to show user progress
     """
     print(alien.LOGO_TWO)
 
     intro()
 
-    """
-    Variables needed for game play
-    """
+    # Variables needed for game play
     country = choose_random_country()
 
     guessed_letters = []
@@ -142,9 +147,7 @@ def main():
 
     alphabet = string.ascii_uppercase
 
-    """
-    Prints a number of _ equal to the letters in the country to guess
-    """
+    # Prints a number of _ equal to the letters in the country to guess
     print("The country contains", len(country), "letters")
     print(len(country) * (" _ "))
 
@@ -177,6 +180,7 @@ def main():
 
         print(alien.ALIENS[remaining_attempts])
 
+        # creates dashes for game display
         status = ""
         if not guessed:
             for letter in country:
@@ -186,6 +190,8 @@ def main():
                     status += " _ "
             print(status)
 
+        # if statements declare winner and loser message upon completion
+        # of game
         if status == country:
             print(
                 "CONGRATULATIONS... You guessed the right country "

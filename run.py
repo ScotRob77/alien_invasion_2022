@@ -1,7 +1,7 @@
-import random
-import countries
-import alien
-import string
+import random  # used to choose the country in the game at random
+import countries  # imported from a seperate file to keep this file tidy
+import alien  # imported form a seperate file to keep this file tidy
+import string  # used to import alphabet which valdidates guesses during game
 
 """
 Credit to https://mardiyyah.medium.com/ for game idea and parts of code

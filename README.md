@@ -105,7 +105,7 @@ As a user I want to be able to:
 * If they choose to play again, the game restarts if not the game gives an exit message and the game exits
 
 ## Future Features
-* Add more visual animation
+* Add more visual animation and color
 * Add countries with more than one word
 ***
 
@@ -123,7 +123,8 @@ The design of the game is based upon the traditional Hangman game, where there a
 The UFO and Alien ASCII art add an enhancement to the user experience
 
 ***
-# Testing 
+# Testing
+* I tested that this page works on Chrome, Edge and Safari.
 ## Testing User Stories
 As a user I want to be able to:
 * Be able to navigate any options available

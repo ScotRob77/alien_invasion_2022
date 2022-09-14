@@ -8,6 +8,10 @@ Credit to https://mardiyyah.medium.com/ for game idea and parts of code
 """
 
 
+def clear():
+    print("\033c")
+
+
 def rules():
     """
     Rules of the game.
@@ -36,8 +40,10 @@ def intro():
     user_input = input("What option would you like: ")
     print("\n")
     if user_input == "1":
+        clear()
         rules()
     elif user_input == "2":
+        clear()
         welcome()
     else:
         print("INVALID INPUT Enter 1 or 2..\n")
@@ -73,6 +79,7 @@ def play_again_winner():
         "Do you think you could stop them again...?\n"
         "\nEnter 'y' to play again: ")
     if response == "y":
+        clear()
         main()
     else:
         print()
@@ -88,6 +95,7 @@ def play_again_loser():
         "Would you like to try again...? Enter 'y' to play again: "
     )
     if response == "y":
+        clear()
         main()
     else:
         print()

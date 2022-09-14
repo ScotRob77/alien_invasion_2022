@@ -33,6 +33,10 @@ def intro():
     """
     Opening text where the user is given two options
     The option to read the rules or to play the game
+        The if statement validates user input
+        else takes user to welcome function
+    Returns:
+        The rules or welcome message
     """
     print("         ALIEN INVASION 2022...!!\n")
     print("Hello Earthling. What would you like to do?")
@@ -51,8 +55,12 @@ def welcome():
     """
     Asks user for name.
     Asks user for letters for name only
-    If user enters name in correct format they are asked what country they
-    think will be invaded first
+        if statement validates user input
+        else asks user to input name again
+    Returns:
+        user enters name in correct format they are asked what country they
+        think will be invaded first
+        if not welcome function initiated again
     """
     print(alien.LOGO)
     print("Before we start, please tell us your name.\n")
@@ -101,9 +109,13 @@ def play_again_loser():
 
 def choose_random_country():
     """
-    Generates the country that the user will be guessing
     Pulls the country_list from the countries file
     And chooses a country at random
+    Assigns to a variable
+
+    Returns:
+    A random country and converts to uppercase. The country
+    returned is used in the game
     """
     random_country = countries.country_list
     return random.choice(random_country).upper()
@@ -111,13 +123,15 @@ def choose_random_country():
 
 def main():
     """
-    Initiates game and incorporates game loop
+    Initiates game and starts game loop
     """
     print(alien.LOGO_TWO)
 
     intro()
 
-    # Variables needed for game play
+    """
+    Variables needed for game play
+    """
     country = choose_random_country()
 
     guessed_letters = []
@@ -128,7 +142,9 @@ def main():
 
     alphabet = string.ascii_uppercase
 
-    # Prints a number of _ equal to the letters in the country to guess
+    """
+    Prints a number of _ equal to the letters in the country to guess
+    """
     print("The country contains", len(country), "letters")
     print(len(country) * (" _ "))
 

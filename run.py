@@ -36,18 +36,15 @@ def intro():
     """
     print("         ALIEN INVASION 2022...!!\n")
     print("Hello Earthling. What would you like to do?")
-    print("Enter 1 for rules or 2 to play the game.\n")
+    print("Enter 1 for rules or anything else to play the game.\n")
     user_input = input("What option would you like: ")
     print("\n")
     if user_input == "1":
         clear()
         rules()
-    elif user_input == "2":
+    else:
         clear()
         welcome()
-    else:
-        print("INVALID INPUT Enter 1 or 2..\n")
-        intro()
 
 
 def welcome():

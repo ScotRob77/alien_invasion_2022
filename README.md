@@ -10,8 +10,9 @@ The game is aimed at people who like guessing games and who may have an interest
 
 # Index
 * [User Experience](#user-experience-ux)
+* [Flow Chart](#flow-chart)
 * [Features](#features)
-  * [Flow Chart](#flow-chart)
+  * [Introduction](#introduction)
   * [Welcome Screen](#welcome-screen)
   * [Rules](#rules)
   * [Game](#game)
@@ -42,22 +43,29 @@ As a user I want to be able to:
 * Enjoy the game
 ***
 
-# Features
-## Current Features
-### Flow Chart
+# Flow Chart
 * I initially created a flow chart to help me plan the game.
 
 ![Flow Chart](images/alien_invasion_flowchhart.jpg)
+***
 
-### Welcome Screen
+# Features
+## Current Features
+
+### Introduction
 * This is displayed when the game starts
 * It shows a UFO using ASCII art and the title of the game
 * It gives the user the option to read the rules by pressing 1 or play the game by entering any other key
+
+![Intro](images/alien_intro.jpg)
 
 ### Rules
 * The rules are written as if they are written by the aliens who are about to invade
 * They tell the user what the game is about and asks for their name
 * There is also a different UFO ASCII art design
+
+![Welcome](images/alien_welcome.jpg)
+![Name](images/alien_name.jpg)
 
 ### Game
 * The game starts by showing the following:
@@ -68,6 +76,12 @@ As a user I want to be able to:
 * As the game progresses a part of an alien appears for every wrong guess, and a Well Done message for every correct guess.
 * The game continues until all guesses are used up or the correct country has been guessed
 * At the end of the game the user has the option to play again
+
+![Guess](images/alien_guess.jpg)
+![Game](images/alien_wrong_guess.jpg)
+![Game](images/alien_congrats.jpg)
+![Game](images/alien_you_lose.jpg)
+
 
 ### Logos
 * Two logos are used in the game to enhance the user experience.

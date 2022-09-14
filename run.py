@@ -132,7 +132,7 @@ def main():
     print("The country contains", len(country), "letters")
     print(len(country) * (" _ "))
 
-    while guessed is False and remaining_attempts > 0:
+    while not guessed and remaining_attempts > 0:
         print("You have " + str(remaining_attempts) + " guesses left.\n")
 
         guess = input("Guess a letter: ").strip().upper()
@@ -162,7 +162,7 @@ def main():
         print(alien.ALIENS[remaining_attempts])
 
         status = ""
-        if guessed is False:
+        if not guessed:
             for letter in country:
                 if letter in guessed_letters:
                     status += letter

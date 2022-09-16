@@ -1,14 +1,17 @@
+"""
+Import statements required for game
+"""
 import random  # used to choose the country in the game at random
+import string  # used to import alphabet which valdidates guesses during game
 import countries  # imported from a seperate file to keep this file tidy
 import alien  # imported form a seperate file to keep this file tidy
-import string  # used to import alphabet which valdidates guesses during game
-
-"""
-Credit to https://mardiyyah.medium.com/ for game idea and parts of code
-"""
 
 
 def clear():
+    """
+    Fubction used to clear terminal screen during game
+    This helps to keep the terminal clean and more readable
+    """
     print("\033c")
 
 
@@ -131,6 +134,7 @@ def main():
     Returns:
         Bad luck message
     Dashes and Alien art are displayed to show user progress
+    Credit to https://mardiyyah.medium.com/ for parts of the following code
     """
     print(alien.LOGO_TWO)
 

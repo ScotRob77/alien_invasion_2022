@@ -132,7 +132,7 @@ As a user I want to be able to:
 * Understand the rules of the game
     * #### The rules are clearly written and easily understandable when the user chooses the rules option
 * Have a large choice of guesses so the game doesn't repeat itself too often
-    * #### There are 150 countries to guess giving the user plenty of choice and little chance of the game repeating itself. The answer is not shown at the end giving the user even more chnces to play
+    * #### There are 150 countries to guess giving the user plenty of choice and little chance of the game repeating itself. The answer is not shown at the end giving the user even more chances to play
 * See how many guesses I have left
     * #### This is clearly shown after each guess and there is a visual guide with the Alien art.
 * Have a clear option to start the game again
